@@ -291,7 +291,7 @@ public class FijkPlayer implements MethodChannel.MethodCallHandler, IjkEventList
                 mEventSink.success(event);
                 break;
             case ERROR:
-                mEventSink.error(String.valueOf(arg1), extra.toString(), arg2);
+                mEventSink.error(String.valueOf(arg1), extra==null? "" : extra.toString(), arg2);
                 break;
             default:
                 // Log.d("FLUTTER", "jonEvent:" + what);
